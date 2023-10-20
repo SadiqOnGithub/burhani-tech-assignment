@@ -1,28 +1,32 @@
-import { Roboto } from 'next/font/google';
+import { Roboto, Sofia_Sans } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
-export const roboto = Roboto({
+export const sofiaSans = Sofia_Sans({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
+  fallback: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
 });
 
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: '#008445',
     },
     secondary: {
-      main: '#19857b',
+      main: '#949E99',
     },
     error: {
       main: red.A400,
     },
   },
+  shape: {
+    borderRadius: 8,
+  },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: sofiaSans.style.fontFamily,
   },
 });
 

@@ -2,23 +2,19 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import SignIn from '../src/pages/SignIn';
+import SignUp from '../src/pages/SignUp';
+import HomePage from '../src/pages/HomePage';
 
 export default function Home() {
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Typography variant="h1" component="h1" gutterBottom>
-          hi
-        </Typography>
+    <>
+    <Typography textAlign="center" mt={10} variant='h3'>Please zoom out for a better view "Ctrl + -" </Typography>
+      <Box display='flex' gap={2} flexWrap='wrap' py={20} >
+        <SignIn />
+        <SignUp />
+        <HomePage />
       </Box>
-    </Container>
+    </>
   );
 }
